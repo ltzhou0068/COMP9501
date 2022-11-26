@@ -1,0 +1,132 @@
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2022
+
+
+% ready for submission
+\usepackage[final]{neurips_2022}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2022}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2022}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2022}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+
+\title{A Survey on Distance Metric Learning}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Litao Zhou \\
+  Department of Computer Science\\
+  University of Hong Kong\\
+  \texttt{ltzhou@cs.hku.hk} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+  In machine learning, there are many methods that require measuring the distance between data points. Traditionally, this is done by choosing some standard distance metric, such as Euclidean distance, and then applying it to the data. However, in many cases, the standard distance metric is not suitable for the data. In this paper, we survey the recent advances in distance metric learning, which aims to learn a distance metric that is suitable for the data.
+  We will study various distance metric methods and compare them by training a KNN classifier based on each distance metric. The methods studied in this survey can be classified into three categories: traditional methods, supervised metric learning methods, and weakly-supervised metric learning methods. The advantages and disadvantages of each method are discussed at the end of the survey.
+\end{abstract}
+
+\section{Introduction}
+
+\input{tex/1_intro.tex}
+
+\section{Related Works}
+\label{sec:related}
+
+\input{tex/2_related.tex}
+
+\section{Methodology}
+\label{sec:method}
+
+\input{tex/3_method.tex}
+
+
+\section{Experiments}
+\label{sec:experiment}
+
+\input{tex/4_experiment.tex}
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\input{tex/5_conclusion.tex}
+
+
+
+
+
+\bibliography{main}
+\bibliographystyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\appendix
+
+
+
+\end{document}

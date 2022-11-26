@@ -1,0 +1,19 @@
+
+
+
+In many machine learning tasks, it is important to select an appropriate distance measure for learning algorithms such as nearest neighbor searches, k-means clustering and so on. 
+In this paper, we survey the recent advances in distance metric learning, which aims to learn a distance metric that is suitable for the data. We will study various distance metric methods and compare them by training a KNN classifier based on each distance metric. The methods studied in this survey can be classified into three categories: traditional methods, supervised metric learning methods, and weakly-supervised metric learning methods. 
+
+The goal of distance measure is to measure the similarity/dissimilarity between two data points. Formally, given two data points $x$ and $y$, the goal of distance measure is to find a function $d$ computes a value $d(x,y)$ to characterize the distance between $x$ and $y$. \emph{Traditional methods} define this function $d$ as a fixed function, such as Euclidean distance, and then apply it to the data. However, in many cases, the standard distance metric is not suitable for the data, as each dimension of the data may have different importance. In this case, it is necessary to learn a distance metric that is suitable for the data. In other words, the distance function should be learned from the data, the process of which is called \emph{distance metric learning}.
+Based on the way data points are used, distance metric learning can be classified into two categories: \emph{supervised metric learning} and \emph{weakly-supervised metric learning}. In supervised metric learning, the data points are paired with labels, and the goal is to learn a distance metric that separate the data points with different labels as far as possible. In weakly-supervised metric learning, the data points are not paired with labels, what is known is a set of constraints that certain pair/group of data points should be close/far to each other. The goal is to learn a distance metric that satisfies the constraints.
+
+In this paper, we survey the recent advances in distance metric learning, which aims to learn a distance metric that is suitable for the data. We will study various distance metric methods and compare them by training a KNN classifier based on each distance metric. For every method, we will introduce the basic idea, demonstrate our experiment results and explain our analysis in this report. Most of our metric learning experiments adopt the implementations in \texttt{metric\_learn}\cite{metric-learn} library. 
+The implementations can be found at \url{https://www.github.com/ltzhou0068/COMP9501}.
+
+The rest of the survey is organized as follows. In Section \ref{sec:related}, we review the related works. In Section \ref{sec:method}, we introduce the setting of our experiments and the dataset used. In Section \ref{sec:experiment}, we present the experimental results. 
+The advantages and disadvantages of each method are discussed in Section \ref{sec:conclusion} at the end of the survey.
+
+
+
+
+
